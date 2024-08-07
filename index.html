@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: conic-gradient(
+          #f0b4b4c4,
+          rgba(176, 224, 137, 0.767),
+          rgba(115, 231, 225, 0.74),
+          rgba(190, 124, 221, 0.781),
+          rgba(100, 240, 147, 0.808)
+        );
+      }
+      .cont {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 30vh 5vh;
+        gap: 10px;
+      }
+      .items {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: larger;
+        font-family: cursive;
+      }
+      .head{
+        grid-column: 1/4;
+      }
+      
+      .foot{
+        grid-column: 1/4;
+      }
+      .main{
+        grid-column: 2/4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cont">
+      <div class="items head" style="background-color: aqua">head</div>
+      <div class="items manu" style="background-color: red">manu</div>
+      <div class="items main" style="background-color: yellowgreen">main</div>
+      <div class="items foot" style="background-color: brown">foot</div>
+    </div>
+  </body>
+</html>
